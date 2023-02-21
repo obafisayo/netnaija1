@@ -7,27 +7,60 @@
 body{
     background-color: rgba(0, 0, 0, 0.904);
     overflow-x: hidden;
+    transition: all 1s;
 }
 .one{
     background-color: black;
+    background-image: url(push.webp);
+    background-size:cover;
     width: 100%;
     height: 22vw;
     display: block;
-
-
+    position: relative;
+    z-index: 2;
+    animation: animie 10s  infinite;
     
 }
+@keyframes animie {
+    10%{
+        background-image: url(push.webp);
+    }
+    50%{
+        background-image: url(bet.png);
+    }
+}
+
 .first{
+    position: relative;
     width: fit-content;
     height: 30%;
     margin-left: 20vw;
-    padding-top:2.5vw ;
+    top:2.5vw ;
+    
 }
 .second{
     width: fit-content;
     height: 20%;
     margin-top: 2.5vw;
     margin-left: 20vw;
+}
+.lm{
+    position: absolute;
+    width: 3vw;
+    height: 2.5vw;
+    left: 2vw;
+    top: 3vw;
+    background-color:indigo;
+    border-radius: 2.5vw 0vw 0vw 2.5vw;
+}
+.dm{
+    position: absolute;
+    left: 6vw;
+    width: 3vw;
+    height: 2.5vw;
+    top: 3vw;
+    background-color: darkgreen;
+    border-radius: 0vw 2.5vw 2.5vw 0vw;
 }
 nav{
     background-color: darkgreen;
@@ -38,16 +71,19 @@ nav{
     color: white;
     position: sticky;
     top: 0;
-    z-index: 1;
+    z-index:1;
 }
 .drawertoggle{
-    width: 10vw;
+    width: 8vw;
     height:100%;
-    background-color: darkgreen;
+    background-color:none;
     display: flex;
     justify-content: center;
     align-items: center;
+    border-radius: 1vw;
+    margin-right: 1vw;
 }
+
 
 .cube{
     position: relative;
@@ -56,6 +92,7 @@ nav{
     margin-top: 0.8vw;
     transform-style: preserve-3d;
     animation: animate 0.8s linear infinite;
+    
 }
 @keyframes animate {
     0%{
@@ -110,10 +147,72 @@ nav{
 
 
 
+.cube4{
+    display: none;
+    position: relative;
+    width: 4.2vw;
+    height: 2.1vw;
+    margin-top: 0.8vw;
+    transform-style: preserve-3d;
+    animation: animate4 0.8s linear infinite;
+    
+}
+@keyframes animate4 {
+    0%{
+        transform: rotateX(-30deg) rotateY(0deg);
+    }
+    100%{
+        transform: rotateX(-30deg) rotateY(360deg);
+    }
+}
+.top4{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width:4vw;
+    height:2.1vw;
+    background-color: black;
+    transform: rotateX(90deg) translateZ(1.04vw);
+}
+.top4::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width:2.1vw;
+    height:2.1vw;
+    background: plum;
+    transform: translateZ(-2.7vw);
+    filter: blur(0.2vw);
+    box-shadow: 0 0 150px indigo,
+    0 0 12px indigo
+    0 0 13px indigo
+    0 0 14px indigo
+    0 0 15px indigo;
+}
+.cube4 div{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+}
+.cube4 div span{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(indigo, blueviolet);
+    transform: rotatey(calc(90deg * var(--i))) translateZ(1.04vw);
+}
+
+
 
 
 .cube2{
-    position: relative;
+    position: absolute;
     width: 6vw;
     height: 6vw;
     transform-style: preserve-3d;
@@ -171,6 +270,70 @@ nav{
     background: linear-gradient(rgb(0, 0, 0), rgb(0, 128, 0));
     transform: rotatey(calc(90deg * var(--i))) translateZ(2.9vw);
 }
+.cube3{
+    display: none;
+    position: absolute;
+    width: 6vw;
+    height: 6vw;
+    transform-style: preserve-3d;
+    animation: animate3 5s linear infinite;
+    margin-bottom: 1vw;
+    margin-left: 1.3vw;
+}
+@keyframes animate3 {
+    0%{
+        transform: rotateX(-30deg) rotateY(0deg);
+    }
+    100%{
+        transform: rotateX(-30deg) rotateY(360deg);
+    }
+}
+.top3{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width:6vw;
+    height:6vw;
+    background-color: black;
+    transform: rotateX(90deg) translateZ(2.9vw);
+}
+.top3::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width:6vw;
+    height:6vw;
+    background: plum;
+    transform: translateZ(-8vw);
+    filter: blur(0.2vw);
+    box-shadow: 0 0 120px indigo,
+    0 0 200px indigo 
+    0 0 300px indigo 
+    0 0 400px indigo 
+    0 0 500px indigo;
+}
+.cube3 div{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+}
+.cube3 div span{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(indigo, blueviolet);
+    transform: rotatey(calc(90deg * var(--i))) translateZ(2.9vw);
+}
+.art{
+    position: relative;
+    top: -7vw;
+}
 
 ul{
     height: 3vw;
@@ -203,84 +366,106 @@ li:hover{
 .extra{
     position: fixed;
     height: 100%;
-    width: 4.3vw;
-    background-color: rgba(0, 0, 0, 0.945);
-    z-index: -1;
+    width: 18.3vw;
+    top: 0vw;
+    clip-path: polygon(0% 0, 24% 0%, 24% 100%, 0% 100%);
+    background-color: rgb(15, 15, 15);
+    z-index: 1;
     display:inline-block;
-    overflow:hidden;
+    transition: all 1s;
+}
+.clipped{
+    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+    transition: all 1s;
+}
+d{
+    padding-left: 1.5vw;
 }
 
 .home{
-    width: 4.3vw;
-    height: 3.6vw;
-    
-    margin-top: 10.5vw;
-    display: grid;
-    place-content: center;
+    width:auto;
+    height: 3.5vw;
+    color: white;
+    margin-top: 10.3vw;
+    padding-left: 1.7vw;
+    display: flex;
+    justify-content:safe;
+    align-items: center;
 }
 .home:hover{
-    background-color: bisque;
+    background-color: rgb(42, 42, 42);
 }
 .paper{
-    width: 4.3vw;
-    height: 4vw;
-   
-    display: grid;
-    place-content: center;
+    width:auto;
+    height: 4.6vw;
+    color: white;
+    padding-left: 1.7vw;
+    display: flex;
+    justify-content:safe;
+    align-items: center;
 }
 .paper:hover{
-    background-color: bisque;
-}
+    background-color: rgb(42, 42, 42);
+} 
 .music{
-    width: 4.3vw;
-    height: 4.3vw;
-   
-    display: grid;
-    place-content: center;
+    width:auto;
+    height: 4.5vw;
+    color: white;
+    padding-left: 1.7vw;
+    display: flex;
+    justify-content:safe;
+    align-items: center;
 }
-.mmusic:hover{
-    background-color: bisque;
-}
+.music:hover{
+    background-color: rgb(42, 42, 42);;
+} 
 .video{
-    width:4.3vw;
-    height: 4.3vw;
-    
-    display: grid;
-    place-content: center;
+    width:auto;
+    height: 4.5vw;
+    color: white;
+    padding-left: 1.7vw;
+    display: flex;
+    justify-content:safe;
+    align-items: center;
 }
 .video:hover{
-    background-color: bisque;
+    background-color: rgb(42, 42, 42);
 }
 .stock{
-    width:4.3vw;
-    height: 3.8vw;
-   
-    display: grid;
-    place-content: center;
+    width:auto;
+    height: 3.5vw;
+    color: white;
+    padding-left: 1.7vw;
+    display: flex;
+    justify-content:safe;
+    align-items: center;
 }
 .stock:hover{
-    background: bisque;
+    background-color: rgb(42, 42, 42);
 }
 .env{
-    width: 4.3vw;
-    height: 3.8vw;
-   
-    display: grid;
-    place-content: center;
+    width:auto;
+    height: 3.5vw;
+    color: white;
+    padding-left: 1.7vw;
+    display: flex;
+    justify-content:safe;
+    align-items: center;
 }
 .env:hover{
-    background-color: bisque;
+    background-color: rgb(42, 42, 42);
 }
 .sear{
-    width: 4.3vw;
-    height: 3.8vw;
-    
-    display: grid;
-    place-content: center;
+    width:auto;
+    height: 3.6vw;
+    color: white;
+    padding-left: 1.7vw;
+    display: flex;
+    justify-content:safe;
+    align-items: center;
 }
 .sear:hover{
-    background-color: bisque;
-    opacity: 0.1;
+    background-color: rgb(42, 42, 42);
 }
 
 .na{
@@ -313,7 +498,6 @@ li:hover{
     font-size: 1.6vw;
 }
 .cool{
-    z-index: -1;
     width: 19vw;
     height: 37vw;
     margin-left: 7vw;
@@ -353,7 +537,7 @@ li:hover{
     width: 100%;
     height: 107%;
     backface-visibility:hidden;
-    background-color: rgba(0, 0, 0, 0.514);
+    background-color: rgb(14, 14, 14);
     color: darkgray;
     position: absolute;
     text-align: center;
@@ -464,7 +648,6 @@ footer{
     "google link soc res "
     "cop cop cop cop"
     ;
-    opacity: 0.8;
 }
 .google{
     grid-area: google;
@@ -625,30 +808,37 @@ padding-top: 0.5vw;
 #under:hover{
     opacity: 0.5;
     background-color: rgba(255, 255, 255, 0.192);
+    cursor: pointer;
 }
 #unde:hover{
     opacity: 0.5;
     background-color: rgba(255, 255, 255, 0.192);
+    cursor: pointer;
 }
 #und:hover{
     opacity: 0.5;
     background-color: rgba(255, 255, 255, 0.192);
+    cursor: pointer;
 }
 #un:hover{
     opacity: 0.5;
     background-color: rgba(255, 255, 255, 0.192);
+    cursor: pointer;
 }
 #underr:hover{
     opacity: 0.5;
     background-color: rgba(255, 255, 255, 0.192);
+    cursor: pointer;
 }
 #undery:hover{
     opacity: 0.5;
     background-color: rgba(255, 255, 255, 0.192);
+    cursor: pointer;
 }
 #underye:hover{
     opacity: 0.5;
     background-color: rgba(255, 255, 255, 0.192);
+    cursor: pointer;
 }
 #unde{
     background-color: rgba(255, 255, 255, 0.171);
@@ -726,13 +916,13 @@ padding-top: 0.5vw;
 }
 h1{
     font-size: 2vw;
-    color: rgba(255, 255, 255, 0.711);
+    color: rgb(255, 255, 255);
     margin-top: 4vw;
     margin-left: 3vw;
 }
 h{
     font-size: 2vw;
-    color: rgba(255, 255, 255, 0.497);
+    color: rgb(255, 255, 255);
     margin-left: 3vw;
 }
 .good{
