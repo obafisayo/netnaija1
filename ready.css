@@ -798,9 +798,9 @@ footer{
 #under{
     background-color: rgba(0, 0, 0, 0);
     border: 1px solid rgba(255, 255, 255, 0.281);
-width: 3vw;
-height: 2.5vw;
-padding-top: 0.5vw;
+    width: 3vw;
+    height: 2.5vw;
+    padding-top: 0.5vw;
 
 }
 #under:hover{
@@ -948,10 +948,10 @@ input{
 }
 @media screen and (max-width: 500px){
     body{
-        
+        height: 5000vw;
         display: grid;
         grid-gap: 29vw;
-        grid-template-columns: 100%;
+        grid-template-columns: 1fr;
         grid-template-rows: 39vw 6vw 40vw 40vw 40vw 40vw ;
         grid-template-areas:
         "spone"
@@ -1028,9 +1028,10 @@ input{
         
     }
     .search{
+        position: relative;
         margin-top: 1%;
         transform: scale(3);
-    
+        left: -5vw;
     }
     
     .logo > img{
@@ -1050,7 +1051,7 @@ input{
         width:auto;
         height: 5vw;
         color: white;
-        margin-top: 25vw; 
+        margin-top: 20vw; 
         display: flex;
         justify-content:safe;
         align-items: center;
@@ -1151,25 +1152,26 @@ input{
         width: 81vw;
         background-color: rgb(16, 15, 15);
         position: relative;
-        top: -78vw;
-        left: -94vw;
+        top: -960vw;
+        left: -92vw;
         font-size: 4vw;
     }
     .mov{
-        transform: scale(2);
+        transform: scale(2.5);
         grid-area: movv;
         position: absolute;
         top: 200vw;
+        left: 4vw;
     }
     .go{
-        transform: scale(2.5);
+        transform: scale(3);
         grid-area: going;
         position: absolute;
        
         top: 220vw;
     }
     .cool{
-        left: 3.5vw;
+        left: 5vw;
         transform: scale(2.25);
         grid-area: cool;
         position: relative;
@@ -1233,7 +1235,7 @@ input{
     .e{
         width: fit-content;
         position: relative;
-        left: -45vw;
+        left: -40vw;
         top: 3330vw;
         transform: scale(2.5);
         font-size: 3.5vw;
@@ -1243,9 +1245,9 @@ input{
         grid-area: rrr;
         top: 3386vw;
         position: relative;
-        left: -40vw;
+        left: -43vw;
         margin-bottom: 120vw;
-        width: 140%;
+        width: 160%;
         height:103vw ;
         transform: scale(2);  
     }
@@ -1270,22 +1272,77 @@ input{
         margin-top: 2vw;
     }
     .llj{
+        transform: scale(1.6);
         position: relative;
         left: -10vw;
-        top: -3vw;
+        top: 2vw;
+    }
+    #under{
+        background-color: rgba(255, 255, 255, 0.171);
+        border: 1px solid rgba(255, 255, 255, 0.281);
+    width: 4vw;
+    height: 4vw;
+    padding-top: 0.5vw;
+    
+    }
+    #unde{
+        background-color: rgba(255, 255, 255, 0.171);
+        border: 1px solid rgba(255, 255, 255, 0.281);
+    width: 4vw;
+    height: 4vw;
+    padding-top: 0.5vw;
+    
+    }
+    #und{
+        background-color: rgba(255, 255, 255, 0.171);
+        border: 1px solid rgba(255, 255, 255, 0.281);
+    width: 4vw;
+    height: 4vw;
+    padding-top: 0.5vw;
+    }
+    #un{
+        background-color: rgba(255, 255, 255, 0.171);
+        border: 1px solid rgba(255, 255, 255, 0.281);
+    width: 4vw;
+    height: 4vw;
+    padding-top: 0.5vw;
+    
+    }
+    #underr{
+        background-color: rgba(255, 255, 255, 0.171);
+        border: 1px solid rgba(255, 255, 255, 0.281);
+    width: 4vw;
+    height: 4vw;
+    padding-top: 0.5vw;
+    
+    }
+    #undery{
+        background-color: rgba(255, 255, 255, 0.171);
+        border: 1px solid rgba(255, 255, 255, 0.281);
+    width: 4vw;
+    height: 4vw;
+    padding-top: 0.5vw;
+    
+    }
+    #underye{
+    background-color: rgba(255, 255, 255, 0.171);
+    border: 1px solid rgba(255, 255, 255, 0.123);
+    width: 3vw;
+    height: 4vw;
+    padding-top: 0.5vw;
+    
     }
     .center{
         font-size: 4vw;
     }
     .mail{
         position: relative;
-        top: 3320vw;
-        height: 55vw;
-        width: 95vw;
-        left: -4vw;
-        
+        padding-left: 3vw;
+        top: 3323vw;
+        height: 58vw;
+        width:105%;
+        left: -3vw;
     }
-
     h1{
        font-size: 5vw;
     }
@@ -1310,7 +1367,12 @@ input{
         font-size: 5vw;
         margin-left: 25vw;
         width: fit-content;
+        height: 17vw;
         
+    }
+    .sub > img{
+        width: 90%;
+        height: 90%; 
     }
     footer{
         top: 3350vw;
@@ -1346,6 +1408,19 @@ input{
     }
 }
 @media screen and (max-width: 380px){
+    .na{
+        transform: scale(1.1);
+        grid-area: name;
+        height: 10vw;
+        display: flex;
+        align-items: center;
+        width: 81vw;
+        background-color: rgb(16, 15, 15);
+        position: relative;
+        top: -957vw;
+        left: -92vw;
+        font-size: 4vw;
+    }
     .extra{
         transform: scale(2);
         width: 50vw;
@@ -1446,38 +1521,38 @@ input{
         transform: scale(3);
         position: relative;
         left: -37vw;
-        top: 3330vw;
+        top: 3370vw;
         grid-area: bet;
     }
     .r{
         
         grid-area: rrr;
-        top: 3410vw;
+        top: 3450vw;
         position: relative;
         left: -40vw;
         margin-bottom: 120vw;
         width: 140%;
-        height:96vw ;
+        height:100vw ;
         transform: scale(2);  
     }
     .e{
         width: fit-content;
         position: relative;
         left: -45vw;
-        top: 3358vw;
+        top: 3398vw;
         transform: scale(2);
         font-size: 3.5vw;
     }
     .mail{
         position: relative;
-        top: 3360vw;
-        height: 55vw;
+        top: 3390vw;
+        height: 65vw;
         width: 94vw;
         left: -4vw;
         
     }
     footer{
-        top: 3390vw;
+        top: 3420vw;
         width: 20vw;
         position: relative;
         grid-area: footer;
