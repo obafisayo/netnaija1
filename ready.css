@@ -366,7 +366,7 @@ li:hover{
 .extra{
     position: fixed;
     height: 100%;
-    width: 18.3vw;
+    width: 18vw;
     top: 0vw;
     clip-path: polygon(0% 0, 24% 0%, 24% 100%, 0% 100%);
     background-color: rgb(15, 15, 15);
